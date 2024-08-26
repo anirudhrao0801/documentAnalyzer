@@ -1,0 +1,18 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+.mypy_cache/
+test-reports/
+
+# Virtual environment
+venv/
+
+# IDE-specific
+*.vscode/
+.idea/
