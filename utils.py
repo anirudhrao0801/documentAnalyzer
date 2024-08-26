@@ -22,5 +22,9 @@ def extract_text_from_pdf(pdf_file):
     except Exception as e:
         print(f"Error extracting text from PDF:{e}")
         return None
+
+def gener
+
+
     
 
