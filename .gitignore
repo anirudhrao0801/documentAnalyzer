@@ -17,5 +17,5 @@ venv/
 *.vscode/
 .idea/
 
-#API Key File
+#API Specific
 gemini_api_key.py
