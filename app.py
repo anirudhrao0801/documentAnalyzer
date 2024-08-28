@@ -40,8 +40,12 @@ st.write("This tool helps you understand legal documents in simpler terms.")
 st.subheader("Disclaimer: This is not a substitute for professional legal advice.")
 
 uploaded_file = st.file_uploader("Upload a legal document (docx, pdf)", type=["docx", "pdf"])
+pov_text = st.text_area("Enter your text here:", placeholder="Identify your role in the agreement. Eg. I am the renter - Anirudh Rao", height=200)
 analyze_button = st.button("Analyze Document")
-if uploaded_file is not None and analyze_button:
+if uploaded_file is not None and analyze_button and pov_text:
     with st.spinner("Analyzing document"):
-        if extract_text_from_pdf(uploaded_file):
-            st.write(generate_response())
+        text = extract_text_from_pdf(uploaded_file)
+        if text:
+            st.write(generate_response(text, pov_text))
+        # if extract_text_from_pdf(uploaded_file):
+        #     st.write(generate_response())
